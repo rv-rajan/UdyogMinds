@@ -79,9 +79,10 @@ const API_BASE_URL = 'https://udyo-location-api.onrender.com/api';
 
 const LOCATION_API = {
   districts: (state: string) =>
-    `${API_BASE_URL}/states/${encodeURIComponent(state)}/districts`,
+    `${API_BASE_URL}/states/${encodeURIComponent(state.toUpperCase())}/districts`,
+
   blocks: (state: string, district: string) =>
-    `${API_BASE_URL}/states/${encodeURIComponent(state)}/districts/${encodeURIComponent(district)}/blocks`,
+    `${API_BASE_URL}/states/${encodeURIComponent(state.toUpperCase())}/districts/${encodeURIComponent(district)}/blocks`,
 };
 
 const STATE_OPTIONS: LocationOption[] = [
