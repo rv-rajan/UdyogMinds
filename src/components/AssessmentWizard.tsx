@@ -75,7 +75,7 @@ interface LocationOption {
 
 // Use Vite's /api proxy so the browser does not hit localhost:3000 directly.
 // vite.config.ts should proxy /api -> http://localhost:3000.
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'https://udyo-location-api.onrender.com/api';
 
 const LOCATION_API = {
   districts: (state: string) =>
